@@ -26,6 +26,8 @@ This program, [`process-run.py`](process-run.py), allows you to see how process 
    <details>
    <summary>Answer</summary>
    Coloque aqui su respuerta
+      ![WhatsApp Image 2025-04-01 at 18 01 07_3224459b](https://github.com/user-attachments/assets/422fa934-b1fd-4216-a44a-6cb3f959bd4f)
+
    </details>
    <br>
 
