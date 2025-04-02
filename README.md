@@ -4,6 +4,7 @@
 |---|---|---|
 |Assandry Baron Rodriguez|assandry.baron@udea.edu.co|AssandryBaron|
 |Huber Steven Arroyave Rojas|huber.arroyave@udea.edu.co|hubersteven|
+|John Bayron Quiroz|bayron.quiroz@udea.edu.co|JohnQuiroz|
 
 ## Instrucciones
 
