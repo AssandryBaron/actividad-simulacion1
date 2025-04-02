@@ -2,8 +2,8 @@
 
 |Integrante|correo|usuario github|
 |---|---|---|
-|Assandry Baron Rodriguez|assandry.baron@udea.edu.co|gihub user integrante 1|
-|Nombre completo integrante 2|correo integrante 2|gihub user integrante 2|
+|Assandry Baron Rodriguez|assandry.baron@udea.edu.co|AssandryBaron|
+|Huber Steven Arroyave Rojas|huber.arroyave@udea.edu.co|hubersteven|
 
 ## Instrucciones
 
