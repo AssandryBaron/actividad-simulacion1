@@ -68,8 +68,9 @@ La CPU, se encuentra ocupada durante 6 unidades de tiempo, es decir, 1 instrucci
 
    <details>
    <summary>Answer</summary>
-      
-   ![respuesta_04](https://github.com/user-attachments/assets/5f81e10a-7468-4b98-8624-0e18ec3dacc8)
+
+   ![04_NUEVA](https://github.com/user-attachments/assets/3a3bc3bb-89f5-411f-94bd-5c15670aec83)
+
 
    Cuando se utiliza SWITCH_ON_END, el sistema no cambiará de proceso hasta que el que se está ejecutando se complete. Como se puede ver, la CPU permanece inactiva durante los tiempos 2 al 6 mientras que el proceso 0 espera por su operación de I/O, a pesar de que el proceso 1 está listo para ejecutarse, dando como resultado, un uso ineficiente de la CPU, ya que se desperdician 5 unidades de tiempo, los cuales, la CPU podría haber estado trabajando en el proceso 1.
 
@@ -99,20 +100,22 @@ La CPU, se encuentra ocupada durante 6 unidades de tiempo, es decir, 1 instrucci
    <details>
    <summary>Answer</summary>
 
-   ![respuesta_06](https://github.com/user-attachments/assets/34b7f128-12fe-46a2-8b98-1cd0c53d4c01)
+   ![06_NUEVA](https://github.com/user-attachments/assets/9764a7d7-5b3d-44b5-b627-0999028ddd74)
+
 
    
    </details>
    <br>
 
-10. Now run the same processes, but with `-I IO RUN IMMEDIATE` set, which immediately runs the process that issued the I/O. How does this behavior differ? Why might running a process that just completed an I/O again be a good idea?
+11. Now run the same processes, but with `-I IO RUN IMMEDIATE` set, which immediately runs the process that issued the I/O. How does this behavior differ? Why might running a process that just completed an I/O again be a good idea?
 
    
 
    <details>
    <summary>Answer</summary>
 
-   ![respuesta_07](https://github.com/user-attachments/assets/a35fabb5-103b-4766-ac91-81f0f76d493d)
+   ![07_NUEVA](https://github.com/user-attachments/assets/7ad8dc2d-1add-4119-906b-f093b1839d02)
+
    
    </details>
    <br>
