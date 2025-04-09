@@ -46,10 +46,10 @@ This program, [`process-run.py`](process-run.py), allows you to see how process 
    
    ![respuesta_02](https://github.com/user-attachments/assets/da37a08f-6133-475e-bdae-35870c1531cc)
 
-En este segundo caso, esta bandera crea un proceso de 4 instrucciones, todas las operaciones de CPU, es decir de una probabilidad de 100% y otro proceso de una instrucción con una probabilidad de 0% de probabilidad, es decir, es una operación de E/S. 
+   En este segundo caso, esta bandera crea un proceso de 4 instrucciones, todas las operaciones de CPU, es decir de una probabilidad de 100% y otro proceso de una instrucción con una       probabilidad de 0% de probabilidad, es decir, es una operación de E/S. 
 
-El tiempo total de ejecución es de 11 unidades, donde el 54.55% la CPU es ocupada, es decir 6 unidades y las otras 5 unidades, es ocupada por E/S lo que equivale al 45.45%. Ya que el proceso 0 que es el PID: 0, ejecuta sus 4 instrucciones de CPU del tiempo 1 al 4. Para el tiempo 5 , el proceso 0 finaliza e inicia el proceso 1 con una operación de E/S. Para los tiempos del 6 al 10, el proceso 1 se encuentra bloqueado, mientras que espera que su operación de E/S se complete. Y por último para el tiempo 11, La operación E/S termina y el proceso 1 ejecuta su instrucción final
-
+   El tiempo total de ejecución es de 11 unidades, donde el 54.55% la CPU es ocupada, es decir 6 unidades y las otras 5 unidades, es ocupada por E/S lo que equivale al 45.45%. Ya que el    proceso 0 que es el PID: 0, ejecuta sus 4 instrucciones de CPU del tiempo 1 al 4. Para el tiempo 5 , el proceso 0 finaliza e inicia el proceso 1 con una operación de E/S. Para los       tiempos del 6 al 10, el proceso 1 se encuentra bloqueado, mientras que espera que su operación de E/S se complete. Y por último para el tiempo 11, La operación E/S termina y el          proceso 1 ejecuta su instrucción final
+   
    </details>
    <br>
 
