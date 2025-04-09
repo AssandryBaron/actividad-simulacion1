@@ -27,7 +27,10 @@ This program, [`process-run.py`](process-run.py), allows you to see how process 
 
    <details>
    <summary>Answer</summary>
-   Coloque aqui su respuesta
+   Para este caso, esta bandera crea 2 procesos, cada uno con 5 instrucciones, los cuales tienen un 100% de probabilidad de usar la CPU, es decir, que no hay operaciones de E/S.
+La utilización de la CPU es del 100%, ya que como se mencionó anteriormente, los 2 procesos, sólo utilizan la CPU. Cuando un proceso termina con sus 5 instrucciones, el sistema cambia inmediatamente al otro proceso en espera que en este caso es PID:1, por lo cual, también podemos ver que la CPU nunca está inactiva, ya que siempre hay un proceso listo para ejecutarse.
+Al ejecutar con -c y -p, se confirma que el porcentaje de la ocupación de la CPU es del 100% y el tiempo total de la ejecución, sería de 10 unidades de tiempo (5 instrucciones para cada proceso)
+
    </details>
    <br>
 
