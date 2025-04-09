@@ -85,11 +85,15 @@ La CPU, se encuentra ocupada durante 6 unidades de tiempo, es decir, 1 instrucci
       
    ![respuesta_05](https://github.com/user-attachments/assets/a19276cc-9134-45ef-9b1d-f28ba375e1bc)
 
+   Cuando se utiliza SWITCH_ON_IO el sistema cambia de proceso cuando el proceso actual entra en espera por I/O, evitando que la CPU quede inactiva en operaciones de entrada/salida. Como podemos ver en el tiempo, 1 entra el proceso 0 con una operación de I/O y el proceso 1 esta en READY, en el tiempo 2, el proceso 0 pasa a BLOCK e inmediatamente entra el proceso 1 a ejecutarse hasta el tiempo 5, en el tiempo 6 el proceso 1 termina el proceso, por lo cual la CPU queda inactiva una unidad en donde en el tiempo 7 temina la operación de I/O en el proceso 0.
+En conclusión, gracias a SWITCH_ON_IO, la CPU mantiene ocupada casi todo el tiempo con un uso de un 85.71% y la I/O estuvo un 71.43% del tiempo, lo cual nos conlleva que el proceso 1 aprovecho bien la CPU, mientras el proceso 0 realizaba una operación I/O.
+
+
       
    </details>
    <br>
 
-8. One other important behavior is what to do when an I/O completes. With `-I IO RUN LATER`, when an I/O completes, the process that issued it is not necessarily run right away; rather, whatever was running at the time keeps running. What happens when you run this combination of processes? (`./process-run.py -l 3:0,5:100,5:100,5:100 -S SWITCH ON IO -c -p -I IO RUN LATER`) Are system resources being effectively utilized?
+9. One other important behavior is what to do when an I/O completes. With `-I IO RUN LATER`, when an I/O completes, the process that issued it is not necessarily run right away; rather, whatever was running at the time keeps running. What happens when you run this combination of processes? (`./process-run.py -l 3:0,5:100,5:100,5:100 -S SWITCH ON IO -c -p -I IO RUN LATER`) Are system resources being effectively utilized?
 
    
 
