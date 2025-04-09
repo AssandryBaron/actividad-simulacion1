@@ -102,8 +102,14 @@ La CPU, se encuentra ocupada durante 6 unidades de tiempo, es decir, 1 instrucci
 
    ![06_NUEVA](https://github.com/user-attachments/assets/9764a7d7-5b3d-44b5-b627-0999028ddd74)
 
+   Para el caso 6, el comando IO_RUN_LATER, permite que el proceso actual en CPU continúe ejecutándose cuando una operación de I/O se completa. El proceso que finalizó de I/O no recibe prioridad inmediata, lo que permite reducir los cambios de contexto, pero puede generar ineficiencias.
+De acuerdo a la simulación, se puede ver que el comando crea 4 procesos. El proceso 0 de operaciones de I/O y los procesos 1, 2 y 3, cada uno con 5 operaciones de CPU.
+En la ejecución, en el tiempo 1, el proceso 0 comienza su primera operación I/O. En los tiempos 2 hasta el 6, mientras que el proceso 0 está bloqueado, el sistema cambia al proceso 1 que ejecuta sus 5 instrucciones de CPU. Para los tiempos 7 al 11, el proceso 2 ejecuta sus 5 instrucciones de CPU. Del 12 al 16, se ejecutan las 5 operaciones del proceso 3. En el 17 la primera I/O del proceso 0 finaliza y ejecuta io_done. En el 18 el proceso 0 inicia su segunda operación de I/O. Del 19 al 23 el proceso permanece bloqueado, pero ya no hay otros procesos para ejecutar en la CPU. En el tiempo 24, la segunda I/O finaliza y ejecuta io_done. Para el 25 el proceso 0 inicia con su tercera operación de I/O. Para los tiempos 26 al 30, el proceso 0 permanece bloqueado mientras que la CPU está inactiva y por último en el tiempo 31, la tercera I/O finaliza, se ejecuta io-done y se terminan todos los procesos.
 
-   
+   Analizando todo lo anterior, se puede evidenciar de que los recursos no se utilizan de una manera eficiente ya que IO_RUN_LATER ocasiona que a pesar de que en los tiempos del 1 al 16 hay un uso eficiente de los recursos, para los otros tiempos, es decir del 17 al 31, la CPU permanece completamente inactiva durante largos periodos mientras el proceso 0, espera que sus operaciones de I/O terminen.
+La estadísticas finales son de 31 unidades de tiempo total, donde hay 21 unidades ocupada por la CPU representando el 67.74% y 15 unidades, que representa el 48.39% ocupadas por I/O
+
+
    </details>
    <br>
 
