@@ -122,7 +122,12 @@ La estadísticas finales son de 31 unidades de tiempo total, donde hay 21 unidad
 
    ![07_NUEVA](https://github.com/user-attachments/assets/7ad8dc2d-1add-4119-906b-f093b1839d02)
 
-   
+   Para este último caso, con la configuración de -I IO_RUN_IMMEDIATE, cambia ya que cuando una operación de I/O se completa, el proceso que la emite se ejecuta inmediatamente, sin importar que el proceso esté utilizando la CPU en ese momento.
+En la ejecución, en el tiempo 1, el proceso 0 inicia su primera operación de I/O. Para los tiempos del 2 al 6, mientras que el proceso 0 está bloqueado, el proceso 1 ejecuta sus primeras instrucciones de CPU. en el tiempo 7, La I/O del proceso 0 se completa, y debito a la configuración IO_RUN_IMMEDIATE, el sistema interrumpe la ejecución del proceso 1 para darle prioridad al proceso 0. En el tiempo 8, el proceso 0, inicia su segunda operación de I/O y el patrón continúa, entrelazando la ejecución de las operaciones de I/O del proceso 0 con las instrucciones de CPU de los otros procesos.
+Ejecutar inmediatamente un proceso que acaba de completar una operación de I/O es muy beneficioso ya que podemos aprovechar la caché y la localidad temporal para aquellas operaciones de I/O que necesiten acceder nuevamente a los datos o realizan otra operación de I/O pronto, esto es conocido como el principio de localidad temporal. También podemos reducir la latencia ya que al darle prioridad a los procesos de I/O se reduce el tiempo que un dispositivo de I/o permanece inactivo. Por otra parte, los procesos suelen operar en patrones de rafagas de CPU seguidas de operaciones de I/O, si se permite que el proceso complete su rafaga actual antes de cambiar a otro proceso, se puede mejorar el rendimiento. Además de eso, se puede asegurar que los procesos con muchas operaciones de I/O no sean postergados indefinidamente por los procesos intensivos en CPU.
+
+   Para esta situación, vemos que el IO_RUN_IMMEDIATE, logra una mejor utilizacion de los recursos y un tiempo total de ejecución más corto comparado con el caso anterior (IO_RUN_LATER), ya que se evita, los largos periodos de inactividad de la CPU mientra que espera po la I/O
+
    </details>
    <br>
 
